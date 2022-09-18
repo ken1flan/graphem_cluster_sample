@@ -8,9 +8,17 @@
 
   .field
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title, class: 'js_character-counter', 'data-target': '#js_character-counter-display_title'
+    %p
+      %small
+        %span#js_character-counter-display_title 0
+        文字
   .field
     = f.label :body
-    = f.text_area :body
+    = f.text_area :body, class: 'js_character-counter', 'data-target': '#js_character-counter-display_body'
+    %p
+      %small
+        %span#js_character-counter-display_body 0
+        文字
   .actions
     = f.submit 'Save'
