@@ -2,3 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "./character_counter"
+
+// 話がややこしくなるので…
+Turbo.session.drive = false;
