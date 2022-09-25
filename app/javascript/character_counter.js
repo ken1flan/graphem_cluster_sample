@@ -16,7 +16,7 @@ var CharacterCounter = CharacterCounter || {};
 CharacterCounter.initialize = function (textInput) {
   var updateTarget = function (textInput) {
     var text = textInput.value;
-    var length = [...text].length;
+    var length = numGraphemeClusters(text);
     var targets = document.querySelectorAll(textInput.dataset.target);
     targets.forEach(function (target) {
       target.textContent = length.toString();
